@@ -99,7 +99,7 @@ function chooseAnswer(i,b){if(answered)return;answered=true;let q=questions[curr
 function nextQuestion(){if(!answered)return;if(current<4){current++;renderQuestion()}else showScreen('screen-proposal')}
 function declineButton(){document.getElementById('noButton').remove();document.getElementById('proposalFeedback').textContent='Ты офигела, передумай быстро. (Сюжета для отказа я не придумал)'}
 function acceptProposal(){showScreen('screen-rules')}
-function openCertificate(){window.open('svidetelstvo_ilya_sofa_kotiki.png','_blank')}
+function openCertificate(){window.open('svidetelstvo.png','_blank')}
 function restart(){let sec=document.getElementById('screen-proposal'),old=document.getElementById('noButton');if(!old){let b=document.createElement('button');b.id='noButton';b.className='option-btn';b.style.marginTop='13px';b.textContent='Нет';b.onclick=declineButton;sec.querySelector('.card').insertBefore(b,document.getElementById('proposalFeedback'))}document.getElementById('proposalFeedback').textContent='';startQuiz()}
 </script>
 </body></html>
