@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff0f3"><title>Мусор дроп 67677676767677676767676</title>
+<style>
+:root{--main:#f04468;--deep:#a9234b;--bg:#fff0f3;--soft:#ffc5d1;--ink:#63283c;--cream:#fffafb;--gold:#e6b66c;--green:#48a66a;--red:#e75a68}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:30px 0;display:grid;place-items:center;overflow-x:hidden;background:radial-gradient(circle at 12% 15%,#fff 0 3px,transparent 4px),radial-gradient(circle at 85% 78%,#ffdce4 0 5px,transparent 6px),linear-gradient(145deg,#fff7f8,#ffe8ee 55%,#fff1f4);font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink)}
+body:before,body:after{content:"";position:fixed;pointer-events:none;border:1px solid rgba(240,68,104,.14);border-radius:50%;width:390px;height:390px;z-index:0}
+body:before{top:-250px;left:-210px;box-shadow:0 0 0 18px rgba(255,255,255,.25),0 0 0 38px rgba(240,68,104,.04)}
+body:after{bottom:-280px;right:-200px;width:480px;height:480px;box-shadow:0 0 0 20px rgba(255,255,255,.25),0 0 0 42px rgba(240,68,104,.04)}
+.heart{position:fixed;z-index:0;pointer-events:none;opacity:.22;animation:floatUp linear infinite;filter:drop-shadow(0 2px 3px #ffc2cf)}
+@keyframes floatUp{0%{transform:translateY(110vh) rotate(-15deg);opacity:0}18%{opacity:.4}100%{transform:translateY(-15vh) rotate(25deg);opacity:0}}
+.container{position:relative;z-index:2;width:min(92%,440px);text-align:center;animation:appear .7s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
+.topline{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 auto 12px;color:#c16a81;font-size:.73rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.topline:before,.topline:after{content:"";width:35px;height:1px;background:#eeb2c0}
+h1{font-family:Georgia,serif;font-weight:700;color:var(--main);font-size:clamp(1.85rem,7vw,2.25rem);line-height:1.12;margin:0 0 18px;text-shadow:0 3px 0 #fff,0 5px 15px #f5b7c5}
+.card{position:relative;background:linear-gradient(145deg,#fff 0%,#fffafb 100%);border:1px solid #f4b8c7;border-radius:29px;padding:34px 25px 27px;margin:0 0 16px;box-shadow:0 15px 35px rgba(174,53,87,.12),inset 0 0 0 5px #fff,inset 0 0 0 6px #fbe0e6;line-height:1.55}
+.card:before{content:"";position:absolute;top:9px;left:15px;color:#ef9caf;font-size:17px}
+.card:after{content:"";position:absolute;top:9px;right:15px;color:#ef9caf;font-size:17px}
+.card p{font-size:1.08rem;margin:0 0 15px;color:var(--ink);font-weight:500}
+.card p:last-child{margin-bottom:0}
+.card b{color:var(--main)}
+.note{font-size:.91rem!important;color:#a56a7b!important;font-weight:400!important}
+.btn,.option-btn{font-family:inherit;font-weight:750;cursor:pointer;transition:transform .22s,box-shadow .22s,background .22s}
+.btn{position:relative;border:1px solid #d9345b;color:#fff;background:linear-gradient(135deg,#ff6682,#e93661);padding:15px 35px;border-radius:999px;font-size:1.04rem;min-height:53px;min-width:170px;display:block;margin:20px auto 0;box-shadow:0 7px 0 #c82c52,0 12px 22px rgba(219,52,91,.22);text-shadow:0 1px 1px #c52d50}
+.btn:after{content:"";position:absolute;inset:4px;border:1px solid rgba(255,255,255,.45);border-radius:inherit;pointer-events:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 9px 0 #c82c52,0 15px 24px rgba(219,52,91,.24)}
+.btn:active{transform:translateY(4px);box-shadow:0 3px 0 #c82c52}
+.option-btn{width:100%;display:block;border:1.5px solid #f3c3ce;background:linear-gradient(120deg,#fff,#fff7f9);color:#783449;border-radius:17px;padding:14px 13px;min-height:51px;margin:0 0 10px;font-size:1rem;box-shadow:0 3px 8px rgba(191,76,109,.06)}
+.option-btn:last-child{margin-bottom:0}
+.option-btn:hover{border-color:var(--main);background:#fff0f4;transform:translateY(-2px);box-shadow:0 6px 13px rgba(191,76,109,.12)}
+.option-btn:active{transform:scale(.97)}
+.option-btn.correct{background:linear-gradient(120deg,#58bd7b,#39975e);border-color:#39975e;color:white}
+.option-btn.wrong{background:linear-gradient(120deg,#f47b83,#df4d62);border-color:#df4d62;color:white}
+.option-btn:disabled{opacity:1;cursor:default}
+.progress-wrap{display:flex;justify-content:space-between;align-items:center;max-width:275px;margin:0 auto 11px;color:#b56d80;font-size:.76rem;font-weight:700;letter-spacing:.06em}
+.progress{height:8px;background:#f9d5de;border:1px solid #f2bdca;border-radius:30px;overflow:hidden;max-width:275px;margin:0 auto 21px;padding:1px}
+.progress span{height:100%;display:block;border-radius:30px;background:linear-gradient(90deg,#ff9caf,#e93b64);transition:width .35s}
+.feedback{min-height:25px;margin:13px 0 0;color:#8c5366;font-size:.96rem}
+.rules{text-align:left;padding-left:22px;margin:0;color:#805063}
+.rules li{padding:7px 0;border-bottom:1px dashed #f4d2da}
+.rules li:last-child{border:0}
+.seal{width:96px;height:96px;margin:0 auto 17px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#fff 48%,#fff0f4 49%);border:3px double #ef91a7;color:var(--main);font-size:2.7rem;box-shadow:0 0 0 7px #fff,0 0 0 8px #f4c4cf,0 8px 20px #e9aab9}
+.cat-stamp{font-size:1.4rem;letter-spacing:.45rem;color:#d9859a;margin:0 0 12px}
+.small{font-size:.83rem;color:#b17b8b;margin-top:17px}
+.hidden{display:none!important}
+@media(max-height:680px){body{align-items:start}.container{margin:18px auto}}
+</style>
+</head>
+<body>
+<script>
+const deco=['','','',''];for(let i=0;i<19;i++){let e=document.createElement('span');e.className='heart';e.textContent=deco[i%deco.length];e.style.left=Math.random()*100+'vw';e.style.animationDuration=(Math.random()*4+6)+'s';e.style.animationDelay=Math.random()*7+'s';e.style.fontSize=(Math.random()*17+13)+'px';document.body.appendChild(e)}
+</script>
+<main class="container">
+<section id="screen-intro">
+<div class="topline">a little surprise</div><div class="cat-stamp">)))</div>
+<h1>Привет, номер 5! </h1>
+<div class="card"><p>Вообще, насколько хорошо ты меня знаешь?</p><p><b>Будет весело</b> </p><p class="note">Надеюсь, ты не приедешь ко мне убивать)).</p></div>
+<button class="btn" onclick="startQuiz()">Начать</button>
+</section>
+<section id="screen-quiz" class="hidden">
+<div class="topline">здесь могла быть твоя реклама, но 67676767676</div>
+<div class="progress-wrap"><span id="stepLabel">ВОПРОС 1 ИЗ 5</span><span></span></div><div class="progress"><span id="progressBar" style="width:20%"></span></div>
+<h1 id="questionTitle">Вопрос #1</h1>
+<div class="card"><div class="cat-stamp"></div><p id="questionText"></p><div id="options"></div><div id="feedback" class="feedback" aria-live="polite"></div></div>
+<button id="nextQuestion" class="btn hidden" onclick="nextQuestion()">Далее </button>
+</section>
+<section id="screen-proposal" class="hidden">
+<div class="topline">я как Ромео, но я не Ромео</div><div class="cat-stamp"> </div><h1>И вот…</h1>
+<div class="card"><p>Я решил скипнуть часть сюжета.</p><p style="font-family:Georgia,serif;font-size:1.65rem;color:var(--main);font-weight:700">Будешь моей женой? </p><p class="note">Что я делаю в свои 16)))))).</p><button class="btn" onclick="acceptProposal()">Да </button><button class="option-btn" id="noButton" style="margin-top:13px" onclick="declineButton()">Нет</button><div id="proposalFeedback" class="feedback"></div></div>
+</section>
+<section id="screen-rules" class="hidden">
+<div class="topline">Условия брака</div><div class="cat-stamp">))))</div><h1>Брачный договор:</h1>
+<div class="card"><ul class="rules"><li>Быть честными друг с другом.</li><li>Поддерживать, когда это действительно нужно.</li><li>Не забывать шутить и смеяться.</li><li>Уважать личные границы и мнение друг друга.</li><li>Не копить обиды, а спокойно разговаривать.</li><li>И обязательно беречь наше хорошее настроение.</li></ul></div>
+<button class="btn" onclick="showScreen('screen-final')">Согласна</button>
+</section>
+<section id="screen-final" class="hidden">
+<div class="topline">Люблю</div><div class="seal"></div><h1>ЛЮБЛЮ</h1>
+<div class="card"><div class="cat-stamp"> Я люблю тебя  </div><p>Спасибо за кучу звонков, и тиктоки которые ты скидываешь, и за наши разговоры.</p><p><b>Объявляю нас <br>Мужем и Женой </b> </p><p class="note">Ниже ты можешь посмотреть свидетельство о заключении нашего брака))</p></div>
+<button class="btn" onclick="openCertificate()">Открыть свидетельство </button><p class="small">создано с любовью</p>
+</section>
+</main>
+<script>
+const questions=[
+{q:'Чем я увлекаюсь?',a:['IT','Английский','Свити Фокс (ой, не сюда)','Фанфиками'],correct:0,why:'Я даже не сомневался — это самый адекватный вариант))'},
+{q:'Как меня зовут?',a:['Никита','Илюшенькаааа','Скала Джонсон','Артур Пирожков'],correct:1,why:'Обожаю)))'},
+{q:'Какой у меня знак зодиака?',a:['Лев','Рак','Дева','Овен'],correct:2,why:'Еман, ты за мной следишь?'},
+{q:'Какой я по характеру?',a:['Ахуенный','Супер ахуенный','Ахуенный','Ахуенный'],correct:1,why:'...'},
+{q:'За что я тебя люблю?',a:['Красивая и Добрая','Умная и Расудительная','Смешная и заботливая','Все вместе)))'],correct:3,why:'Ага'}
+];
+let current=0,answered=false;
+function showScreen(id){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));let el=document.getElementById(id);el.classList.remove('hidden');el.style.animation='none';void el.offsetWidth;el.style.animation='appear .7s ease both';window.scrollTo({top:0,behavior:'smooth'})}
+function startQuiz(){current=0;renderQuestion();showScreen('screen-quiz')}
+function renderQuestion(){answered=false;let q=questions[current];document.getElementById('questionTitle').textContent='Вопрос #'+(current+1);document.getElementById('questionText').textContent=q.q;document.getElementById('stepLabel').textContent='ВОПРОС '+(current+1)+' ИЗ 5';document.getElementById('progressBar').style.width=((current+1)/5*100)+'%';document.getElementById('feedback').textContent='';document.getElementById('nextQuestion').classList.add('hidden');let box=document.getElementById('options');box.innerHTML='';q.a.forEach((a,i)=>{let b=document.createElement('button');b.className='option-btn';b.textContent=a;b.onclick=()=>chooseAnswer(i,b);box.appendChild(b)})}
+function chooseAnswer(i,b){if(answered)return;answered=true;let q=questions[current],bs=[...document.querySelectorAll('#options button')];bs.forEach(x=>x.disabled=true);if(i===q.correct){b.classList.add('correct');document.getElementById('feedback').textContent=q.why}else{b.classList.add('wrong');bs[q.correct].classList.add('correct');document.getElementById('feedback').textContent='Не совсем. Правильный ответ: '+q.a[q.correct]+'. '+q.why}let n=document.getElementById('nextQuestion');n.classList.remove('hidden');n.textContent=current===4?'Нажать(там чтото важное) ':'Далее '}
+function nextQuestion(){if(!answered)return;if(current<4){current++;renderQuestion()}else showScreen('screen-proposal')}
+function declineButton(){document.getElementById('noButton').remove();document.getElementById('proposalFeedback').textContent='Ты офигела, передумай быстро. (Сюжета для отказа я не придумал)'}
+function acceptProposal(){showScreen('screen-rules')}
+function openCertificate(){window.open('svidetelstvo.png','_blank')}
+function restart(){let sec=document.getElementById('screen-proposal'),old=document.getElementById('noButton');if(!old){let b=document.createElement('button');b.id='noButton';b.className='option-btn';b.style.marginTop='13px';b.textContent='Нет';b.onclick=declineButton;sec.querySelector('.card').insertBefore(b,document.getElementById('proposalFeedback'))}document.getElementById('proposalFeedback').textContent='';startQuiz()}
+</script>
+</body></html>
